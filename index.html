@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Tracker - Light Pale Theme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      // Opt-in to future default behavior for an easier upgrade
+      future: {
+        hoverOnlyWhenSupported: true,
+      },
+      plugins: [
+        require('@tailwindcss/typography'),
+      ]
+    }
+  </script>
+  <style>
+    /* Custom scrollbar for webkit browsers - light theme */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9; /* slate-100 */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1; /* slate-300 */
+      border-radius: 20px;
+      border: 2px solid #f1f5f9; /* slate-100, to give padding effect */
+      background-clip: content-box;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8; /* slate-400 */
+    }
+    /* For Firefox */
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 #f1f5f9; /* thumb track */
+    }
+    body {
+      background-color: #f8fafc; /* slate-50 as a base for pale theme */
+      color: #334155; /* slate-700 default text */
+    }
+    /* Basic prose styling fallbacks if typography plugin has issues via CDN or for specific elements */
+    .prose ul { list-style-type: disc; margin-left: 1.5em; }
+    .prose li { margin-bottom: 0.25em; }
+    .prose strong { font-weight: 600; }
+    .prose h3 { font-size: 1.1em; font-weight: 600; margin-top: 0.8em; margin-bottom: 0.4em; }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.522.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-error-boundary": "https://esm.sh/react-error-boundary@^4.0.13",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "@tailwindcss/typography": "https://esm.sh/@tailwindcss/typography@^0.5.15"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

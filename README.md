@@ -1,5 +1,7 @@
 # Run and deploy your AI Studio app
 
+Live demo: https://hulk2228.github.io/fitness/
+
 This contains everything you need to run your app locally.
 
 ## Run Locally
